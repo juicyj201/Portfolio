@@ -8,6 +8,28 @@
     --centered-color: black;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main styles */
+body {
+  font-family: Montserrat;
+  font-weight: 50;
+  font-size: 130%;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  word-spacing: 20%;
+  letter-spacing: 5%;
+  background-color: var(--black-color);
+  color: var(--main-color);
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .white {
     color: var(--white-color);
 }
@@ -106,21 +128,6 @@ a {
   0% {
     background-position: 50px 50px;
   }
-}
-
-/* Main styles */
-body {
-    font-family: Montserrat;
-    font-weight: 50;
-    font-size: 130%;
-    position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
-    word-spacing: 20%;
-    letter-spacing: 5%;
-    background-color: var(--black-color);
-    color: var(--main-color);
-    text-align: center;
 }
 
 .glowing {
@@ -292,28 +299,6 @@ body {
     stroke-dasharray: 200 200;
   }
 }
-
-/* @-webkit-keyframes stroke-color {
-  0%  { stroke: #3498DB; }
-  24% { stroke: #643232; }
-  25% { stroke: #327864; }
-  49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
-}
-
-@keyframes stroke-color {
-  0%  { stroke: #3498DB; }
-  24% { stroke: #643232; }
-  25% { stroke: #327864; }
-  49% { stroke: #327864; }
-  50% { stroke: #32326e; }
-  74% { stroke: #32326e; }
-  75% { stroke: #78325a; }
-  99% { stroke: #78325a; }
-} */
 
 @-webkit-keyframes stroke-color {
   0%  { stroke: var(--main-color); }
