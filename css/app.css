@@ -116,7 +116,6 @@ body {
     position: relative;
     margin-left: 10%;
     margin-right: 10%;
-    overflow: scroll;
     word-spacing: 20%;
     letter-spacing: 5%;
     background-color: var(--black-color);
