@@ -348,8 +348,40 @@ a {
     margin-left: 0%;
     width: 600px;
     height: 300px;
-    object-fit: cover;  
-    object-position: 40% 40%;
+    object-fit: contain;  
+    object-position: 80% 40%;
+    box-shadow: 10px 10px var(--main-color);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 60%;
+  }
+
+  /* HEADINGS */
+  .standard-heading{
+    font-size: 120%;
+    color: var(--white-color);
+  }
+
+  .main-heading{
+    font-size: 220%;
+    color: var(--main-color);
+  }
+
+  .sub-heading {
+    font-size: 60%;
+    color: var(--light-grey-color);
+  }  
+
+  /* CROPPED IMAGE */
+  .cropped-image img {
+    margin-left: 0%;
+    width: 550px;
+    height: 250px;
+    object-fit: contain;  
+    object-position: 80% 40%;
     box-shadow: 10px 10px var(--main-color);
   }
 }
