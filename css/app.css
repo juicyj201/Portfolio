@@ -349,7 +349,7 @@ a {
     width: 600px;
     height: 300px;
     object-fit: contain;  
-    object-position: 80% 40%;
+    object-position: 130% 50%;
     box-shadow: 10px 10px var(--main-color);
   }
 }
