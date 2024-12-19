@@ -1,0 +1,230 @@
+/* COLORS */
+:root {
+    --main-color:#ff8777;
+    --black-color: black;
+    --white-color: white;
+    --light-grey-color: lightgrey;
+    --grey-color: grey;
+    --centered-color: black;
+}
+
+.white {
+    color: var(--white-color);
+}
+
+.pink {
+    color: var(--main-color);
+}
+
+.grey{
+    color: var(--black-color);
+    opacity: 0.5;
+}
+
+.light-grey{
+    background-color: var(--white-color);
+}
+
+/* HEADINGS */
+.standard-heading{
+    font-size: 200%;
+    color: var(--white-color);
+}
+
+.main-heading{
+    font-size: 350%;
+    color: var(--main-color);
+}
+
+.sub-heading {
+    font-size: 130%;
+    color: var(--light-grey-color);
+}
+
+.text-alignment {
+  text-align: left;
+  margin-left: 5%;
+}
+
+/* CROPPED IMAGE */
+.cropped-image img {
+    padding: 1%;
+    margin-top: 3%;
+    margin-left: 10%;
+    width: 450px;
+    height: 700px;
+    object-fit: cover;  
+    object-position: 40% 40%;
+    box-shadow: 10px 10px var(--main-color);
+}
+
+a {
+    text-decoration: unset;
+}
+
+.landing {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Main styles */
+body {
+    font-family: Montserrat;
+    font-weight: 50;
+    font-size: 130%;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: scroll;
+    word-spacing: 20%;
+    letter-spacing: 5%;
+    background-color: var(--black-color);
+    color: var(--main-color);
+    text-align: center;
+}
+
+.glowing {
+    position: relative;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+}
+  
+.glowing:nth-child(even) {
+    transform-origin: left;
+}
+  
+@keyframes colorChange {
+    0% {
+      filter: hue-rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+  
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+  
+.glowing span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: var(--grey-color);
+    border-radius: 50%;
+}
+  
+.glowing span:nth-child(3n + 1)::before {
+    background: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color),
+      0 0 40px var(--main-color),
+      0 0 60px var(--main-color),
+      0 0 80px var(--main-color),
+      0 0 0 8px rgba(255, 135, 119, .1);
+}
+  
+.glowing span:nth-child(3n + 2)::before {
+    background: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color),
+      0 0 40px var(--main-color),
+      0 0 60px var(--main-color),
+      0 0 80px var(--main-color),
+      0 0 0 8px rgba(255, 135, 119, .1);
+}
+  
+.glowing span:nth-child(3n + 3)::before {
+    background: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color),
+      0 0 40px var(--main-color),
+      0 0 60px var(--main-color),
+      0 0 80px var(--main-color),
+      0 0 0 8px rgba(255, 135, 119, .1);
+}
+  
+.glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+}
+  
+.glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+}
+  
+.glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite; 
+}
+  
+@keyframes animate {
+    0% {
+      transform: rotate(180deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+@keyframes animate-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(0deg);
+    }
+}
