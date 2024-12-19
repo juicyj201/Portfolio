@@ -321,3 +321,35 @@ a {
   75% { stroke: var(--main-color); }
   99% { stroke: var(--main-color); }
 }
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 80%;
+  }
+
+  /* HEADINGS */
+  .standard-heading{
+    font-size: 150%;
+    color: var(--white-color);
+  }
+
+  .main-heading{
+    font-size: 250%;
+    color: var(--main-color);
+  }
+
+  .sub-heading {
+    font-size: 80%;
+    color: var(--light-grey-color);
+  }  
+
+  /* CROPPED IMAGE */
+  .cropped-image img {
+    margin-left: 0%;
+    width: 600px;
+    height: 300px;
+    object-fit: cover;  
+    object-position: 40% 40%;
+    box-shadow: 10px 10px var(--main-color);
+  }
+}
